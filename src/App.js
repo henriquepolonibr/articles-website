@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import UserProvider from './Contexts/filter';
-import Home from './components/Home';
+import Home from './Pages/Home';
 
 function App() {
   return (

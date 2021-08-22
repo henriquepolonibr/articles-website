@@ -22,11 +22,6 @@ const SearchArticle = () => {
       setDataArticle(data) 
     })
   }
-  
-  useEffect(() => {
-    apiCall()
-  }, []);
-  console.log('dataArticle', dataArticle)
   return (
     <S.SearchBox>
       <FontAwesomeIcon icon={faSearch} size="sm" />
