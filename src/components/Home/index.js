@@ -1,12 +1,16 @@
 import React from 'react';
-import * as S from 'styled-components';
 import SearchArticle from '../SearchArticle';
+import FilterSelect from '../FilterSelect';
+import * as S from './styles';
 
 const Home = () => {
   return(
-    <div>
-      <SearchArticle />
-    </div>
+    <S.Wrapper>
+      <S.Header>
+        <SearchArticle />
+        <FilterSelect />
+      </S.Header>
+    </S.Wrapper>
   )
 }
 

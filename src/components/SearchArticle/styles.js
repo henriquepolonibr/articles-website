@@ -7,8 +7,9 @@ export const SearchBox = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 100%;
     @media (min-width: 768px){
-        margin: 81px 210px 57px;
+        margin: 81px 120px 57px 0px;
     }
 
     svg{
