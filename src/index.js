@@ -1,6 +1,12 @@
 import React from 'react';
-import ReactDom from 'react-dom';
+import ReactDOM from 'react-dom';
+import App from './App';
+import GlobalStyles from './Styles/Global'
 
 ReactDOM.render(
+  <React.StrictMode>
+    <GlobalStyles />
+    <App />
+  </React.StrictMode>,
   document.querySelector('#app')
 )
