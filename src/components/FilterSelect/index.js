@@ -10,7 +10,7 @@ const FilterSelect = () => {
   ]
 
   return (
-    <div>
+    <S.OrderContent>
       <S.Label>
         <S.Select
           onChange={(e) => {
@@ -26,7 +26,7 @@ const FilterSelect = () => {
           ))}
         </S.Select>
       </S.Label>
-    </div>
+    </S.OrderContent>
   )
 }
 

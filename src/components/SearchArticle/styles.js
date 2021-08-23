@@ -1,13 +1,13 @@
 import styled from 'styled-components';
 
 export const SearchBox = styled.div`
-    margin: 13px 10px;
     border-bottom: 1px solid #BDBDBD;
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
     width: 100%;
+    margin-top: 30px;
     @media (min-width: 768px){
         margin: 81px 120px 57px 0px;
     }
@@ -27,7 +27,7 @@ export const SearchText = styled.textarea`
     font-weight: 300;
     text-align: center;
     font-size: 20px;
-    line-height: 24px;
+    line-height: 14px;
     width: 100%;
     background-color: #FFFFFF;
     border: none;

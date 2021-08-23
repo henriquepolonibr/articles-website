@@ -1,5 +1,10 @@
 import styled from 'styled-components'
 
+export const OrderContent = styled.div`
+  display: flex;
+  justify-content: center;
+`
+
 export const Label = styled.label`
   position: relative;
   &:after {
@@ -12,7 +17,7 @@ export const Label = styled.label`
     -ms-transform: rotate(90deg);
     transform: rotate(90deg);
     right: 8px;
-    top: 5px;
+    top: 20px;
     padding: 2px 0px 0px;
     position: absolute;
     pointer-events: none;
