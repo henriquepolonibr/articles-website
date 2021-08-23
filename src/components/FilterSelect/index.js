@@ -1,10 +1,12 @@
-import React, { useState } from 'react';
+import React, { useContext } from 'react';
+import { UserFilterContext } from '../../Contexts/filterSelect'
 import * as S from './styles'
 
 const FilterSelect = () => {
-  const [selectedValue, setSelectedValue] = useState('');
+  const { selectedValue, setSelectedValue } = useContext(UserFilterContext)
   const orderType = [
-    'Mais relevantes'
+    'Mais relevantes',
+    'test'
   ]
 
   return (
@@ -12,7 +14,8 @@ const FilterSelect = () => {
       <S.Label>
         <S.Select
           onChange={(e) => {
-            setSelectedValue(e.target.value)
+            setSelectedValue(e.target.value);
+            console.log('selectedValue', selectedValue)
           }}
         >
           <S.SelectOption hidden> Ordenar por: {selectedValue}</S.SelectOption>
