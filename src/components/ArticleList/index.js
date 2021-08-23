@@ -8,7 +8,17 @@ const ArticleList = () => {
   if(articleInfo != null){
     var articleCard = []
     for (var element of articleInfo) {
-      articleCard.push(<S.ArticleItem key={element.id}>{element.slug}</S.ArticleItem>)
+      articleCard.push(
+        <S.ArticleItem key={element.id}>
+          <S.ArticleThumbnail src={element.featured_media.thumbnail} />
+          <S.ArticleText>
+            <S.ArticleTitle>{element.title}</S.ArticleTitle>
+            <S.ArticleDescription>{element.headline}</S.ArticleDescription>
+          </S.ArticleText>
+          {/* link: {element.link}<br /> */}
+        </S.ArticleItem>
+      )
+      console.log('featured_media', element)
     }
   }
   return(
