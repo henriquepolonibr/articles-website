@@ -5,7 +5,7 @@ import * as S from './styles'
 const FilterSelect = () => {
   const { selectedValue, setSelectedValue } = useContext(UserFilterContext)
   const orderType = [
-    'Mais relevantes',
+    'relevance',
     'test'
   ]
 
@@ -20,7 +20,7 @@ const FilterSelect = () => {
         >
           <S.SelectOption hidden> Ordenar por: {selectedValue}</S.SelectOption>
           {orderType.map((option, index) => (
-            <S.SelectOption key={option} value={index}>
+            <S.SelectOption key={index} value={option}>
               {option}
             </S.SelectOption>
           ))}

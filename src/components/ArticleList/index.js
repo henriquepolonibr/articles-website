@@ -11,7 +11,7 @@ const ArticleList = () => {
       articleCard.push(
         <S.ArticleItem key={element.id}>
           <S.AlignImage>
-            <S.ArticleThumbnail src={element.featured_media.thumbnail} />
+            <S.ArticleThumbnail src={element.featured_media.thumbnail ? element.featured_media.thumbnail : 'https://beta.mejorconsalud.com/wp-content/uploads/2019/11/padre-mirando-hijo-150x150.jpg'} />
           </S.AlignImage>
           <S.ArticleText>
             <S.ArticleTitle>{element.title}</S.ArticleTitle>
@@ -21,7 +21,7 @@ const ArticleList = () => {
           {/* link: {element.link}<br /> */}
         </S.ArticleItem>
       )
-      console.log('featured_media', element)
+      // console.log('featured_media', element)
     }
   }
   return(
