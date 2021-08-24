@@ -2,6 +2,7 @@ import React from 'react';
 import SearchArticle from '../../components/SearchArticle';
 import FilterSelect from '../../components/FilterSelect'
 import ArticleList from '../../components/ArticleList'
+import Pagination from '../../components/Pagination'
 import * as S from './styles';
 
 const Home = () => {
@@ -12,6 +13,7 @@ const Home = () => {
         <FilterSelect />
       </S.Header>
       <ArticleList />
+      <Pagination />
     </S.Wrapper>
   )
 }

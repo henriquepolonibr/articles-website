@@ -1,4 +1,4 @@
-import React, { useState, useContext } from 'react';
+import React, { useContext } from 'react';
 import { UserContext } from '../../Contexts/typedValue'
 import { UserDataArticleContext } from '../../Contexts/dataArticle'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -27,7 +27,7 @@ const SearchArticle = () => {
     <S.SearchBox>
       <FontAwesomeIcon icon={faSearch} size="sm" />
       <S.SearchText
-        placeholder="Search article"
+        placeholder="Buscar artigo"
         name="filterTextArea"
         type="text"
         id="textAreaFilterField"

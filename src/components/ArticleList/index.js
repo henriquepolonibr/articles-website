@@ -10,10 +10,13 @@ const ArticleList = () => {
     for (var element of articleInfo) {
       articleCard.push(
         <S.ArticleItem key={element.id}>
-          <S.ArticleThumbnail src={element.featured_media.thumbnail} />
+          <S.AlignImage>
+            <S.ArticleThumbnail src={element.featured_media.thumbnail} />
+          </S.AlignImage>
           <S.ArticleText>
             <S.ArticleTitle>{element.title}</S.ArticleTitle>
             <S.ArticleDescription>{element.headline}</S.ArticleDescription>
+            {/* <S.ArticleDate>Article | {element.modified}</S.ArticleDate> */}
           </S.ArticleText>
           {/* link: {element.link}<br /> */}
         </S.ArticleItem>

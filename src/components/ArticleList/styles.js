@@ -22,12 +22,18 @@ export const ArticleItem = styled.div`
   margin-bottom: 20px;
   @media(min-width: 768px){
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     flex-direction: row;
     height: 200px;
   }
 `
+export const AlignImage = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`
+
 export const ArticleThumbnail = styled.img`
   max-height: 200px;
   max-width: 200px;
@@ -53,4 +59,11 @@ export const ArticleDescription = styled.div`
   @media(min-width: 768px){
     font: 12px;
   }
+`
+
+export const ArticleDate = styled.div`
+  font-size: 10px;
+  font-weight: bold;
+  position: relative;
+  right: 0px;
 `
