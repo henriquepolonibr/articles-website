@@ -1,4 +1,5 @@
 import React, { useContext } from 'react';
+import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';  
 import { UserDataArticleContext } from '../../Contexts/dataArticle'
 import { UserContext } from '../../Contexts/typedValue'
 import * as S from './styles'
@@ -12,17 +13,21 @@ const ArticleList = () => {
     var articleCard = []
     for (var element of articleInfo) {
       articleCard.push(
-        <S.ArticleItem key={element.id}>
-          <S.AlignImage>
-            <S.ArticleThumbnail src={element.featured_media.thumbnail ? element.featured_media.thumbnail : 'https://beta.mejorconsalud.com/wp-content/uploads/2019/11/padre-mirando-hijo-150x150.jpg'} />
-          </S.AlignImage>
-          <S.ArticleText>
-            <S.ArticleTitle>{element.title}</S.ArticleTitle>
-            <S.ArticleDescription>{element.headline}</S.ArticleDescription>
-            {/* <S.ArticleDate>Article | {element.modified}</S.ArticleDate> */}
-          </S.ArticleText>
-          {/* link: {element.link}<br /> */}
-        </S.ArticleItem>
+        <Router key={element.id}> 
+          <Link to={`/article/${element.id}`}>
+            <S.ArticleItem>
+              <S.AlignImage>
+                <S.ArticleThumbnail src={element.featured_media.thumbnail ? element.featured_media.thumbnail : 'https://beta.mejorconsalud.com/wp-content/uploads/2019/11/padre-mirando-hijo-150x150.jpg'} />
+              </S.AlignImage>
+              <S.ArticleText>
+                <S.ArticleTitle>{element.title}</S.ArticleTitle>
+                <S.ArticleDescription>{element.headline}</S.ArticleDescription>
+                {/* <S.ArticleDate>Article | {element.modified}</S.ArticleDate> */}
+              </S.ArticleText>
+              {/* link: {element.link}<br /> */}
+            </S.ArticleItem>
+          </Link>
+        </Router> 
       )
       // console.log('featured_media', element)
     }

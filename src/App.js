@@ -1,9 +1,9 @@
 import React from 'react';
+import Routes from './routes';
 import UserProvider from './Contexts/typedValue';
 import UserProviderFilter from './Contexts/filterSelect';
 import UserProviderDataArticle from './Contexts/dataArticle';
 import UserProviderPageNumber from './Contexts/pageNumber';
-import Home from './Pages/Home';
 
 function App() {
   return (
@@ -12,7 +12,7 @@ function App() {
         <UserProviderDataArticle>
           <UserProviderPageNumber>
             <div>
-              <Home />
+              <Routes />
             </div>
           </UserProviderPageNumber>
         </UserProviderDataArticle>
