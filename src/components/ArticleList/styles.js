@@ -67,3 +67,15 @@ export const ArticleDate = styled.div`
   position: relative;
   right: 0px;
 `
+
+export const NoResultsFound = styled.div`
+  width: 100%;
+  margin: 200px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  span{
+    font-size: 25px;
+    color: red;
+  }
+`
