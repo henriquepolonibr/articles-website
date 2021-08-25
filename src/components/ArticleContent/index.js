@@ -1,17 +1,17 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-// import * as S from './styles';
+import * as S from './styles';
 
 const ArticleContent = () => {
   const { idNumber } = useParams();
   const [articleData, setArticleData] = useState({
-    "id": "",
+    "title": "",
+    "headline": "",
+    "featured_media": "",
+    "text": "",
     "slug": "",
-    "link": ""
 });
-  console.log('articleData', articleData)
-  console.log('valores', articleData.id)
-
+  console.log('test', articleData.featured_media.large)
   useEffect(() => {
     function apiCall(){
       var url = ("https://api.beta.mejorconsalud.com/wp-json/mc/v1/posts/" + idNumber);
@@ -26,8 +26,11 @@ const ArticleContent = () => {
  
   return (
     <div>
-      <h1>{ idNumber } </h1>
-      <h1>{ articleData.slug } </h1>
+      <S.Article>Article | {articleData.slug}</S.Article>
+      <S.ArticleTitle>{articleData.title}</S.ArticleTitle>
+      <S.ArticleHeadline>{articleData.headline}</S.ArticleHeadline>
+      <S.ArticleImage src={articleData.featured_media.large}></S.ArticleImage>
+      <S.ArticleDescription>{articleData.excerpt}</S.ArticleDescription>
     </div>
   );
 };
