@@ -15,7 +15,6 @@ const FilterSelect = () => {
         <S.Select
           onChange={(e) => {
             setSelectedValue(e.target.value);
-            console.log('selectedValue', selectedValue)
           }}
         >
           <S.SelectOption hidden> Ordenar por: {selectedValue}</S.SelectOption>

@@ -18,3 +18,16 @@ export const Header = styled.div`
     flex-direction: row;
   }
 `
+
+export const NoResultsFound = styled.div`
+  width: 100%;
+  margin: 200px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  span{
+    font-size: 25px;
+    color: red;
+    text-align: center;
+  }
+`

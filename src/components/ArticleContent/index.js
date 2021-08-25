@@ -11,7 +11,6 @@ const ArticleContent = () => {
     "text": "",
     "slug": "",
 });
-  console.log('test', articleData.featured_media.large)
   useEffect(() => {
     function apiCall(){
       var url = ("https://api.beta.mejorconsalud.com/wp-json/mc/v1/posts/" + idNumber);

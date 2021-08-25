@@ -68,15 +68,16 @@ export const ArticleDate = styled.div`
   right: 0px;
 `
 
-export const NoResultsFound = styled.div`
-  width: 100%;
-  margin: 200px 0px;
+export const NumberOfArticles = styled.div`
   display: flex;
-  justify-content: center;
-  align-items: center;
-  span{
-    font-size: 25px;
-    color: red;
-    text-align: center;
+  justify-content: flex-start;
+  align-items: flex-end;
+  margin: 30px 0px;
+  font-size: 14px;
+  font-weight: 500;
+  @media(min-width: 768px){
+    justify-content: flex-end;
+    font-weight: 600;
+    margin: 20px 0px;
   }
 `
