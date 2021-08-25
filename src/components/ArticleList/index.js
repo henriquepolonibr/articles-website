@@ -18,7 +18,7 @@ const ArticleList = () => {
           <Link to={`/article/${element.id}`}>
             <S.ArticleItem>
               <S.AlignImage>
-                <S.ArticleThumbnail src={element.featured_media.thumbnail ? element.featured_media.thumbnail : 'https://beta.mejorconsalud.com/wp-content/uploads/2019/11/padre-mirando-hijo-150x150.jpg'} />
+                <S.ArticleThumbnail src={element.featured_media.thumbnail ? element.featured_media.thumbnail : 'https://beta.mejorconsalud.com/wp-content/uploads/2019/11/padre-mirando-hijo-150x150.jpg'} alt={element.title} title={element.title} />
               </S.AlignImage>
               <S.ArticleText>
                 <S.ArticleTitle>{element.title}</S.ArticleTitle>

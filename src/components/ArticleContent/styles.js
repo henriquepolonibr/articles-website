@@ -5,7 +5,7 @@ export const Article = styled.div`
     font-weight: bold;
 `
 
-export const ArticleTitle = styled.div`
+export const ArticleTitle = styled.h1`
     font-size: 20px;
     font-weight: bold;
     color: #419fb9;

@@ -28,7 +28,7 @@ const ArticleContent = () => {
       <S.Article>Article | {articleData.slug}</S.Article>
       <S.ArticleTitle>{articleData.title}</S.ArticleTitle>
       <S.ArticleHeadline>{articleData.headline}</S.ArticleHeadline>
-      <S.ArticleImage src={articleData.featured_media.large}></S.ArticleImage>
+      <S.ArticleImage src={articleData.featured_media.large} alt={articleData.excerpt} title={articleData.excerpt}></S.ArticleImage>
       <S.ArticleDescription>{articleData.excerpt}</S.ArticleDescription>
     </div>
   );
