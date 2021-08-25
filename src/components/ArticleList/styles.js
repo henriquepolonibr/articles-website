@@ -77,5 +77,6 @@ export const NoResultsFound = styled.div`
   span{
     font-size: 25px;
     color: red;
+    text-align: center;
   }
 `

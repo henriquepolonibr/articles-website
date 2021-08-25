@@ -12,6 +12,9 @@ const SearchArticle = () => {
   const { articleData, setArticleData } = useContext(UserDataArticleContext);
   const { pageNumber, setPageNumber } = useContext(UserPageNumberContext);
   const { selectedValue, setSelectedValue } = useContext(UserFilterContext)
+  if(typedValue == ''){
+    setPageNumber(1)
+  }
   useEffect(() => {
     function apiCall(){
       var url = new URL("https://api.beta.mejorconsalud.com/wp-json/mc/v2/posts"),
@@ -29,7 +32,6 @@ const SearchArticle = () => {
     }
     apiCall()
   }, [typedValue, pageNumber, selectedValue])
-
   return (
     <S.SearchBox>
       <FontAwesomeIcon icon={faSearch} size="sm" />
